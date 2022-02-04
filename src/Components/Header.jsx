@@ -6,6 +6,8 @@ import { auth, provider, signInWithPopup } from "../firebase";
 
 import { useDispatch, useSelector } from "react-redux";
 
+import { Link, Outlet } from "react-router-dom";
+
 import {
   selectUserName,
   selectUserPhoto,
@@ -64,29 +66,39 @@ function Header() {
           {!username ? (
             <button onClick={handleAuth}> Sign In</button>
           ) : (
-            <div>
-              <img
-                className="pfp"
-                src={userPhoto}
-                alt={username}
-                onClick={ChangeShowSignOut}
-              />
-              <span
-                id="sign-out"
-                className={
-                  !ShowSignOut ? "sign-out-hidden" : "sign-out-visible"
-                }
-                onClick={handleAuth}
-              >
-                Sign Out
-              </span>
+            <div className="header-right">
+              <div className="header-lib">
+                <Link to="/lib">
+                  <h3>My Blogs</h3>
+                </Link>
+              </div>
+              <div className="img-sign-out">
+                <img
+                  className="pfp"
+                  src={userPhoto}
+                  alt={username}
+                  onClick={ChangeShowSignOut}
+                />
+                <span
+                  id="sign-out"
+                  className={
+                    !ShowSignOut ? "sign-out-hidden" : "sign-out-visible"
+                  }
+                  onClick={handleAuth}
+                >
+                  Sign Out
+                </span>
+              </div>
             </div>
           )}
         </div>
       </section>
       <div className="blogger-title">
-        <h2 className="gradient">{!username ? "Blog" : `${username}'s Blog`}</h2>
+        <h2 className="gradient">
+          {!username ? "Blog" : `${username}'s Blog`}
+        </h2>
       </div>
+      <Outlet/>
     </header>
   );
 }

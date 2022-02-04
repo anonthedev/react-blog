@@ -3,6 +3,11 @@
     padding: 0;
 }
 
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
 body{
     background-color: #000000;
     color: #fff;

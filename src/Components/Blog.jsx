@@ -22,7 +22,7 @@ function Blog(props) {
                 <p>{trimContent(blog.content, 500)}</p>
               </div>
               <div className="blog-img">
-                <img src={blog.img} alt="" />
+                <img src={blog.img ? blog.img : "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=773&q=80"} alt="" />
               </div>
             </a>
           </div>

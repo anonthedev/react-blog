@@ -1,0 +1,60 @@
+.new-blog{
+    width: 85vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.new-blog-title{
+    margin: 3rem 0px 3rem 0px;
+}
+
+input{
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+
+input:focus{
+    outline: none;
+    border: none;
+}
+
+textarea:focus{
+    outline: none;
+    border: none;
+}
+
+span{
+    display: flex;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.new-blog-title input{
+    width: 70vw;
+    height: 10px;
+    padding: 20px;
+    font-size: 1.2rem;
+    font-family: monospace;
+}
+
+.new-blog-content textarea{
+    width: 70vw;
+    height: 90vh;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 1.1rem;
+}
+
+button{
+    cursor: pointer;
+    margin: 20px 0px 20px 0px;
+    width: 100px;
+    height: 45px;
+    font-family: "Poppins", monospace;
+    font-weight: bold;
+    font-size: 1rem;
+}

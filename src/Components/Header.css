@@ -13,6 +13,17 @@
   justify-content: space-between;
 }
 
+.header-right {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.header-lib {
+  cursor: pointer;
+  margin-top: 30px;
+}
+
 .blogger-title {
   height: 30vh;
   display: flex;
@@ -64,6 +75,11 @@
   border: none;
   outline: none;
   border-radius: 5px;
+}
+
+.img-sign-out {
+  display: flex;
+  flex-direction: column;
 }
 
 .pfp {
@@ -120,9 +136,9 @@
   }
 }
 
-@media only screen and (max-width: 767px){
-    .blogger-title h2 {
-        text-align: center;
-        font-size: 3.8rem;
-    }
+@media only screen and (max-width: 767px) {
+  .blogger-title h2 {
+    text-align: center;
+    font-size: 3.8rem;
+  }
 }
